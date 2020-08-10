@@ -6,7 +6,9 @@
     </head>
     <body>
         <center>
-        <img src="{{ url_for('static', filename='test.png') }}" width="500" height="500">
+            {% for image in images_present %}
+                <img src="{{ url_for('static', filename=image) }}" width="500" height="500">
+            {% endfor %}
         </center>
     </body>
     <p> Display Successful {{args}}</p>
